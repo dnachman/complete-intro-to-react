@@ -1,20 +1,23 @@
 var div = React.DOM.div;
 var h1 = React.DOM.h1;
 
-var MyTitle = React.createClass({
-    render() {
-        return (
-            div(null,
-                h1(null, 'Check out this component!'))
-        );
-    }
-});
+var MyTitle = function(props) {
+
+    return (
+        div(null,
+            h1({ style: {color: props.color} }, props.title)
+            )
+    );
+
+};
+
+var MyTitleFact = React.createFactory(MyTitle);
 
 var MyFirstComponent = (
     div(null,
-      React.createElement(MyTitle, null),
-      React.createElement(MyTitle, null),
-      React.createElement(MyTitle, null)
+        MyTitleFact({title: 'Props are great!', color: 'rebeccapurple'}),
+        MyTitleFact({title: 'Use props everywhere!', color: 'mediumaquamarine'}),
+        MyTitleFact({title: 'Props are the best!', color: 'peru'})
     )
 )
 
