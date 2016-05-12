@@ -1,7 +1,8 @@
-var React = require('React');
-var ReactDOM = require('ReactDOM');
+var React = require('react');
+var ReactDOM = require('react-dom');
 var div = React.DOM.div;
 var h1 = React.DOM.h1;
+var MyTitle = require('./MyTitle');
 
 var MyTitle = function (props) {
     return (
