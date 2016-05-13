@@ -5,12 +5,14 @@
   "main": "index.js",
   "author": "Brian Holt <btholt@gmail.com>",
   "license": "MIT",
-  "scripts" : {
-    "test": "semistandard", 
-    "build": "webpack js/ClientApp.js public/bundle.js"
+  "scripts": {
+    "test": "semistandard",
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
   "dependencies": {
     "axios": "0.9.1",
+    "eslint-config-semistandard": "^6.0.2",
     "express": "4.13.4",
     "lodash": "4.6.1",
     "react": "^0.14.7",
