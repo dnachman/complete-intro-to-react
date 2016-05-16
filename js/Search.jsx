@@ -5,8 +5,9 @@ const data = require('../public/data');
 const Search = () => (
   <div className='container'>
     <div className='shows'>
-      {data.shows.map((show, index) => (
-        <ShowCard show={show} key={index} id={index} />
+      {data.shows
+        .map((show, index) => (
+          <ShowCard {...show} />
       ))}
     </div>
   </div>
